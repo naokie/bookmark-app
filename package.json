@@ -1,0 +1,19 @@
+{
+  "name": "bookmark-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "author": "Naoki Endoh <naoki.endoh@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "3.0.4",
+    "jquery": "2.2.4",
+    "vue": "1.0.24"
+  },
+  "devDependencies": {
+    "electron-prebuilt": "1.2.2"
+  }
+}
