@@ -8,6 +8,18 @@ module.exports = {
     filename: 'build.js'
   },
   module: {
+    preLoaders: [
+      {
+        test: /\.vue$/,
+        loader: 'eslint',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.js$/,
+        loader: 'eslint',
+        exclude: /node_modules/
+      }
+    ],
     loaders: [
       {
         test: /\.vue$/,
@@ -23,6 +35,9 @@ module.exports = {
   babel: {
     presets: ['es2015'],
     plugins: ['transform-runtime']
+  },
+  eslint: {
+    formatter: require('eslint-friendly-formatter')
   },
   plugins: [
     new webpack.ExternalPlugin('commonjs', [
